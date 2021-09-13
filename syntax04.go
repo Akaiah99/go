@@ -11,6 +11,8 @@ func main() {
 	seed := time.Now().Unix()
 	rand.Seed(seed)
 
-	dice := rand.Intn(6) + 1
-	fmt.Println(dice)
+	for i := 1; i < 6; i++ {
+		dice := rand.Intn(6) + 1
+		fmt.Println(dice)
+	}
 }
