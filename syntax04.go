@@ -3,9 +3,14 @@ package main
 import (
 	"fmt"
 	"math/rand"
+	"time" // seed 생성용 패키지
 )
 
 func main() {
-	number := rand.Intn(3)
-	fmt.Println(number)
+	// seed 설정
+	seed := time.Now().Unix()
+	rand.Seed(seed)
+
+	dice := rand.Intn(6) + 1
+	fmt.Println(dice)
 }
